@@ -1,0 +1,96 @@
+:root {
+            --primary-color: #2980b9;
+            --secondary-color: #34495e;
+            --background-color: #f0f0f0;
+            --card-background: #ffffff;
+            --accent-color: #e74c3c;
+            --shadow-color: rgba(0, 0, 0, 0.1);
+            --success-color: #27ae60;
+            --warning-color: #f39c12;
+            --error-color: #e74c3c;
+        }
+
+        /* Estilos Generales */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: var(--background-color);
+            color: var(--secondary-color);
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+        }
+.form-pago {
+    max-width: 500px;
+    margin: 2em auto;
+    padding: 2em;
+    background-color: var(--card-background);
+    border-radius: 12px;
+    box-shadow: 0 4px 12px var(--shadow-color);
+}
+
+.form-pago h2 {
+    text-align: center;
+    margin-bottom: 1em;
+    color: var(--secondary-color);
+}
+
+.form-group {
+    margin-bottom: 1.2em;
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group label {
+    margin-bottom: 0.4em;
+    font-weight: 600;
+    color: var(--secondary-color);
+}
+
+.form-group input,
+.form-group textarea {
+    padding: 0.8em;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 1em;
+    outline: none;
+    transition: border-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    border-color: var(--primary-color);
+    box-shadow: 0 0 5px rgba(41, 128, 185, 0.3);
+}
+
+.required {
+    color: var(--accent-color);
+}
+
+.btn-pago {
+    width: 100%;
+    background-color: var(--primary-color);
+    color: #fff;
+    padding: 1em;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.1em;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out, transform 0.2s ease-in-out;
+}
+
+.btn-pago:hover {
+    background-color: #21618c;
+    transform: scale(1.02);
+}
+
+footer {
+            background-color: var(--card-background) !important;
+            text-align: center !important;
+            padding: 1.5em !important;
+            margin-top: 5.3em !important;
+            color: #777 !important;
+            border-top: 1px solid #eee !important;
+            box-shadow: 0 -2px 4px var(--shadow-color) !important;
+            width: cover !important;
+        }

@@ -1,34 +1,30 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="estilo.css">
     <title>Entre Nubes</title>
+    <link rel="stylesheet" href="estilo.css">
 </head>
 <body>
-
     <header>
         <div class="header-content">
             <div class="logo">
                 <a href="index.html">Entre Nubes</a>
             </div>
             <nav>
-                <ul>
-                    <li><a href="index.html">Inicio</a></li>
-                    <li><a href="#productos-destacados">Productos</a></li>
-                    <li><a href="#">Contacto</a></li>
-                    <li><a href="#"><img src="carrito.svg" alt=""></a></li>
-                    <li><div class="carrito" id="cantidad"><p>0</p></div></li>
+                <ul id="ulmenu">
+
                 </ul>
-                
             </nav>
             <div class="search-bar">
-                <input type="text" placeholder="Buscar...">
-                <button type="submit"><i class="fas fa-search"></i></button>
-            </div>
+    <input type="text" id="buscadorMenu" placeholder="Buscar...">
+    <button type="button" onclick="buscarEnMenu()">🔍</button>
+</div>
         </div>
     </header>
+
     <section id="hero">
         <div class="hero-content">
             <div class="hero-text">
@@ -36,15 +32,19 @@
                 <p>Descubre tesoros únicos y encuentra tu próxima prenda favorita a precios increíbles.</p>
                 <a href="#productos-destacados" class="cta-button">Ver Productos Destacados</a>
             </div>
+            <div>
+                <img id="producto-img" src="sabanas-fondo.jpeg" alt="Imagen hero">
+            </div>
         </div>
     </section>
 
-    <section id="productos-destacados">
-        <h2>Nuestros Destacados</h2>
-        <div class="productos-grid">
+    <main>
+        <section id="productos-destacados">
+            <h2>Nuestros Destacados</h2>
+            <div id="boxproductos">
+
             </div>
-    </section>
-    <main id="producto">
+        </section>
         
     </main>
 
@@ -53,5 +53,7 @@
     </footer>
 
     <script src="script.js"></script>
-    </body>
+    <script src="carrito.js"></script>
+
+</body>
 </html>

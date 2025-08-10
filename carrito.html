@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Entre Nubes</title>
+    <link rel="stylesheet" href="estilo.css">
+    <link rel="stylesheet" href="carrito.css">
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <div class="logo">
+                <a href="index.html">Entre Nubes</a>
+            </div>
+            <nav>
+                <ul id="ulmenu">
+
+                </ul>
+            </nav>
+            <div class="search-bar">
+                <input type="text" id="buscadorMenu" placeholder="Buscar...">
+                <button type="button" onclick="buscarEnMenu()">🔍</button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <h2>Tu Carrito de Compras</h2>
+        
+        <div class="carrito-container">
+            <table class="carrito-table">
+                <thead>
+                    <tr>
+                        <th>Imagen</th>
+                        <th>Cantidad</th>
+                        <th>Producto</th>
+                        <th>Precio</th>
+                        <th>Total</th>
+                        <th>Acciones</th>
+                    </tr>
+                </thead>
+                <tbody id="tablacarrito">
+  
+                </tbody>
+            </table>
+            
+            <div class="carrito-acciones">
+                <button onclick="vaciarCarrito()" class="btn-vaciar">Vaciar Carrito</button>
+                <button onclick="window.location.href='index.html'" class="btn-seguir">Seguir Comprando</button>
+                <button onclick="window.location.href='form.html'" class="btn-comprar">Proceder al Pago</button>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Entre Nubes. Todos los derechos reservados.</p>
+    </footer>
+
+    <script src="carrito.js"></script>
+</body>
+</html>

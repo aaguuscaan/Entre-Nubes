@@ -1,41 +1,56 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Entre Nubes</title>
     <link rel="stylesheet" href="detalle.css">
-    <title>Ropa Usada Chic</title>
 </head>
 <body>
-
     <header>
         <div class="header-content">
             <div class="logo">
-                <a href="index.html">Ropa Usada Chic</a>
+                <a href="index.html">Entre Nubes</a>
             </div>
             <nav>
-                <ul>
-                    <li><a href="index.html">Inicio</a></li>
-                    <li><a href="#">Productos</a></li>
-                    <li><a href="#">Contacto</a></li>
-                    <li><a href="#"><img src="carrito.svg" alt=""></a></li>
-                    <li><div class="carrito" id="agregarproducto"><p>0</p></div></li>
+                <ul id="ulmenu">
+
                 </ul>
-                
             </nav>
             <div class="search-bar">
-                <input type="text" placeholder="Buscar...">
-                <button type="submit"><i class="fas fa-search"></i></button>
+                <input type="text" id="buscadorMenu" placeholder="Buscar...">
+                <button type="button" onclick="buscarEnMenu()">🔍</button>
             </div>
         </div>
     </header>
-    <main id="producto">
-        
+
+    <main>
+        <section class="producto-principal" id="producto-principal">
+        </section>
+
+        <section class="productos-destacados">
+            <h2>Otros Productos que te Pueden Interesar</h2>
+            <div class="productos-grid" id="productos-destacados">           </div>
+        </section>
     </main>
 
+    <div class="alert-overlay" id="alertOverlay">
+        <div class="alert-box" id="alertBox">
+            <div class="alert-icon" id="alertIcon">✓</div>
+            <div class="alert-title" id="alertTitle">Título</div>
+            <div class="alert-message" id="alertMessage">Mensaje</div>
+            <div class="alert-buttons">
+                <button class="alert-button primary" id="alertConfirm">Aceptar</button>
+                <button class="alert-button secondary" id="alertCancel" style="display: none;">Cancelar</button>
+            </div>
+        </div>
+    </div>
+
     <footer>
-        <p>&copy; 2024 Ropa Usada Chic. Todos los derechos reservados.</p>
+        <p>&copy; 2025 Entre Nubes. Todos los derechos reservados.</p>
     </footer>
     <script src="detalle.js"></script>
-    </body>
+    <script src="script.js"></script>
+</body>
 </html>
