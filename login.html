@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iniciar Sesión - Entre Nubes</title>
+    <link rel="stylesheet" href="login.css">
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <div class="logo">
+                <a href="index.html">Entre Nubes</a>
+            </div>
+            <nav>
+                <ul id="ulmenu">
+                    <!-- El menú se cargará dinámicamente -->
+                </ul>
+            </nav>
+            <div class="search-bar">
+                <input type="text" placeholder="Buscar...">
+                <button type="submit">🔍</button>
+            </div>
+        </div>
+    </header>
+
+    <main id="boxregistrarse">
+        <form id="boxlogin">
+            <label for="inpemail">Correo electrónico:</label>
+            <input type="email" id="inpemail" placeholder="tu@email.com" required>
+            
+            <label for="inppassword">Contraseña:</label>
+            <input type="password" id="inppassword" placeholder="••••••••" required>
+            
+            <label for="inpconfirmar" id="confirmar">Confirmar contraseña:</label>
+            <input type="password" id="inpconfirmar" placeholder="••••••••">
+            
+            <label for="verpassword">
+                <input type="checkbox" id="verpassword">
+                Mostrar contraseña
+            </label>
+            
+            <button id="btniniciar" type="submit">
+                <span>Iniciar Sesión</span>
+            </button>
+            <button id="btnregistrarse" type="button">
+                <span>Registrarse</span>
+            </button>
+        </form>
+    </main>
+
+    <footer>
+        <h2>Entre Nubes</h2>
+        <p>Av. Siempre viva 2450</p>
+        <p>Tel: 0528850397987</p>
+        <p>&copy; 2025 Entre Nubes. Todos los derechos reservados.</p>
+    </footer>
+
+    <script type="module" src="login.js"></script>
+</body>
+</html>

@@ -1,0 +1,386 @@
+/* form.css - Estilos para la página del formulario de pago */
+
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;600;700&family=Montserrat:wght@300;400;500;600&display=swap');
+
+:root {
+    --cream: #F5F0E8;
+    --warm-beige: #E8DCC4;
+    --terracotta: #C8957D;
+    --sage: #A8B5A0;
+    --deep-sage: #7A8A7E;
+    --charcoal: #2C2C2C;
+    --white: #FFFFFF;
+    --shadow: rgba(0, 0, 0, 0.1);
+    --error: #D64545;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: var(--cream);
+    color: var(--charcoal);
+    line-height: 1.6;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* ==================== HEADER ==================== */
+header {
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 20px rgba(0, 0, 0, 0.05);
+}
+
+.header-content {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 1.5rem 3rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo a {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 2rem;
+    font-weight: 600;
+    letter-spacing: 2px;
+    color: var(--charcoal);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.logo a:hover {
+    color: var(--terracotta);
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 2.5rem;
+    align-items: center;
+}
+
+nav a {
+    text-decoration: none;
+    color: var(--charcoal);
+    font-weight: 400;
+    font-size: 0.95rem;
+    letter-spacing: 0.5px;
+    transition: color 0.3s ease;
+}
+
+nav a:hover {
+    color: var(--terracotta);
+}
+
+nav a img {
+    width: 24px;
+    height: 24px;
+}
+
+.carrito {
+    background-color: var(--terracotta);
+    border-radius: 50%;
+    color: white;
+    padding: 0.3rem 0.6rem;
+    font-size: 0.85rem;
+    font-weight: 600;
+}
+
+.search-bar {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.search-bar input {
+    padding: 0.7rem 1.2rem;
+    border: 2px solid var(--warm-beige);
+    border-radius: 25px;
+    outline: none;
+    transition: all 0.3s ease;
+}
+
+.search-bar button {
+    background-color: var(--terracotta);
+    color: white;
+    border: none;
+    padding: 0.7rem 1.2rem;
+    border-radius: 25px;
+    cursor: pointer;
+}
+
+/* ==================== MAIN CONTENT ==================== */
+main {
+    flex: 1;
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 4rem 2rem;
+    width: 100%;
+}
+
+/* ==================== FORMULARIO DE PAGO ==================== */
+.form-pago {
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.08);
+    padding: 3.5rem;
+}
+
+.form-pago h2 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 2.5rem;
+    font-weight: 600;
+    color: var(--charcoal);
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.form-pago h2::after {
+    content: '';
+    display: block;
+    width: 80px;
+    height: 2px;
+    background: var(--terracotta);
+    margin: 1.5rem auto 2.5rem;
+}
+
+/* ==================== GRUPOS DEL FORMULARIO ==================== */
+.form-group {
+    margin-bottom: 2rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.6rem;
+    font-weight: 600;
+    color: var(--charcoal);
+    font-size: 0.95rem;
+    letter-spacing: 0.3px;
+}
+
+.required {
+    color: var(--terracotta);
+    font-weight: 700;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 1rem 1.2rem;
+    border: 2px solid var(--warm-beige);
+    border-radius: 6px;
+    font-size: 1rem;
+    font-family: 'Montserrat', sans-serif;
+    color: var(--charcoal);
+    outline: none;
+    transition: all 0.3s ease;
+    background: white;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    border-color: var(--terracotta);
+    box-shadow: 0 0 0 3px rgba(200, 149, 125, 0.1);
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+    color: var(--deep-sage);
+    opacity: 0.6;
+}
+
+.form-group textarea {
+    resize: vertical;
+    min-height: 120px;
+    line-height: 1.6;
+}
+
+/* Validación visual */
+.form-group input:invalid:not(:placeholder-shown) {
+    border-color: var(--error);
+}
+
+.form-group input:valid:not(:placeholder-shown) {
+    border-color: var(--sage);
+}
+
+/* ==================== BOTÓN DE ENVÍO ==================== */
+.btn-pago {
+    width: 100%;
+    background: var(--terracotta);
+    color: white;
+    padding: 1.2rem 2rem;
+    border: 2px solid var(--terracotta);
+    border-radius: 6px;
+    font-size: 1.05rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.4s ease;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    margin-top: 1rem;
+    position: relative;
+    overflow: hidden;
+}
+
+.btn-pago::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: var(--charcoal);
+    transition: left 0.4s ease;
+    z-index: 0;
+}
+
+.btn-pago:hover::before {
+    left: 0;
+}
+
+.btn-pago:hover {
+    border-color: var(--charcoal);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(44, 44, 44, 0.2);
+}
+
+.btn-pago:active {
+    transform: translateY(0);
+}
+
+/* Mensaje de información */
+.form-info {
+    background: var(--cream);
+    border-left: 4px solid var(--terracotta);
+    padding: 1.2rem 1.5rem;
+    margin-bottom: 2rem;
+    border-radius: 4px;
+    font-size: 0.95rem;
+    color: var(--deep-sage);
+    line-height: 1.6;
+}
+
+.form-info strong {
+    color: var(--charcoal);
+}
+
+/* ==================== FOOTER ==================== */
+footer {
+    background: var(--charcoal) !important;
+    color: white !important;
+    text-align: center !important;
+    padding: 3rem 2rem !important;
+    margin-top: auto !important;
+    width: 100% !important;
+    border-top: none !important;
+}
+
+footer p {
+    opacity: 0.7 !important;
+    letter-spacing: 0.5px !important;
+    color: white !important;
+}
+
+/* ==================== ESTADO DE CARGA ==================== */
+.btn-pago:disabled {
+    background: var(--sage);
+    border-color: var(--sage);
+    cursor: not-allowed;
+    opacity: 0.7;
+}
+
+.btn-pago:disabled::before {
+    display: none;
+}
+
+/* Animación de envío */
+@keyframes sending {
+    0%, 100% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0.5;
+    }
+}
+
+.btn-pago.sending {
+    animation: sending 1.5s infinite;
+}
+
+/* ==================== MENSAJES DE ERROR ==================== */
+.error-message {
+    color: var(--error);
+    font-size: 0.85rem;
+    margin-top: 0.5rem;
+    display: none;
+}
+
+.form-group.error .error-message {
+    display: block;
+}
+
+.form-group.error input,
+.form-group.error textarea {
+    border-color: var(--error);
+}
+
+/* ==================== RESPONSIVE ==================== */
+@media (max-width: 968px) {
+    .header-content {
+        padding: 1rem 1.5rem;
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    nav ul {
+        gap: 1rem;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    main {
+        padding: 2rem 1.5rem;
+    }
+
+    .form-pago {
+        padding: 2rem 1.5rem;
+    }
+
+    .form-pago h2 {
+        font-size: 2rem;
+    }
+
+    .form-group {
+        margin-bottom: 1.5rem;
+    }
+
+    .form-group input,
+    .form-group textarea {
+        padding: 0.9rem 1rem;
+    }
+
+    .btn-pago {
+        padding: 1rem 1.5rem;
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .form-pago {
+        padding: 1.5rem 1rem;
+    }
+
+    .form-pago h2 {
+        font-size: 1.75rem;
+    }
+
+    .search-bar {
+        display: none;
+    }
+}
